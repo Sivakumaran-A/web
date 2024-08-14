@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 6px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        .profile h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .skills {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .skills h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skills ul li {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills ul li:hover {
+            background: linear-gradient(135deg, #ff6f61, #d500f9);
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .skills ul li i {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .profile h1 {
+                font-size: 2rem;
+            }
+
+            .skills ul li {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            position: relative;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .fa-envelope {
+            margin-right: 0.5rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #fff;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        #contact h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-icon:hover {
+            background: linear-gradient(135deg, #ff6f61, #d500f9);
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SivaKumaran</h1>
+        <p>System Developer | Software Engineer</p>
+    </header>
+
+    <div class="container">
+        <section id="profile" class="profile">
+            <img src="siva.jpg" alt="SivaKumaran">
+            <h1>SivaKumaran</h1>
+            <p>I'm a passionate System Developer with expertise in creating efficient and scalable systems. I specialize in software engineering and system design.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><i class="fab fa-python"></i></li>
+                <li><i class="fab fa-html5"></i></li>
+                <li><i class="fab fa-java"></i></li>
+                <li><i class="fas fa-database"></i></li>
+                <li><i class="fab fa-linux"></i></li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me via the following channels:</p>
+            <div class="contact-icons">
+                <a href="https://www.instagram.com/sivakumaran_off" target="_blank" class="contact-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:sivakumarana2020@gmail.com" class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 SivaKumaran. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for future functionality if needed
+        console.log('Personal Portfolio Page Loaded');
+    </script>
+</body>
+</html>
+
